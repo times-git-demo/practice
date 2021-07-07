@@ -1,7 +1,13 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkblue;
+}
+/* class selector */
 .heading {
     font-size: larger;
     font-style: italic;
 }
+/* id selector */
 #para {
     color: blueviolet
 }
