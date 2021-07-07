@@ -1,3 +1,5 @@
+
+/* Universal Selector */
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:darkblue;
@@ -10,4 +12,9 @@
 /* id selector */
 #para {
     color: blueviolet
+}
+
+/* grouping selectors */
+button, input {
+    border-radius: 20%;
 }
