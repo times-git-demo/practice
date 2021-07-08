@@ -53,6 +53,9 @@ body {
   outline: white solid .5px;
   outline-offset: 5px;
 }
+.header .nav .menu ul li a:visited {
+  color: rgb(253, 207, 207);
+}
 .header .banner {
   text-align: center;
   margin: 10% auto;
