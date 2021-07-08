@@ -48,6 +48,11 @@ body {
 .header .nav .menu ul li a {
   color: rgba(255, 255, 255, 0.8);
 }
+.header .nav .menu ul li a:hover {
+  color: white;
+  outline: white solid .5px;
+  outline-offset: 5px;
+}
 .header .banner {
   text-align: center;
   margin: 10% auto;
