@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="on">Switch On</button>
+    <button id="off">Switch Off</button>
+    <img id="bulb" src="pic_bulboff.gif">
+    <script>
+        const bulb = document.getElementById("bulb");
+        const onSwitch = document.getElementById("on");
+        const offSwitch = document.getElementById("off");
+        onSwitch.addEventListener("click", () => {
+            bulb.src="pic_bulbon.gif"
+        })
+        offSwitch.addEventListener("click", () => {
+            bulb.src="pic_bulboff.gif"
+        })
+    </script>
+</body>
+</html>
