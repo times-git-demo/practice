@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Students</title>
+  </head>
+  <body>
+    <h3>Sort According to Marks</h3>
+    <button id="sort-by-marks">
+      Sort
+    </button>
+    <div id="student-list"></div>
+    <script>
+        const students = [
+          { name: "john", marks: 45 },
+          { name: "sylvia", marks: 59 },
+          { name: "sam", marks: 69 },
+          { name: "rony", marks: 75 },
+          { name: "taylor", marks: 67 },
+        ];
+        const sortByMarksBtn = document.getElementById("sort-by-marks");
+        sortByMarksBtn.addEventListener("click", () => {
+          students.sort((a, b) => {
+            return a.marks - b.marks;
+          });
+          displayList()
+        });
+        function displayList() {
+            
+          const studentList = document.getElementById("student-list");
+          studentList.innerHTML =""
+          const listElem = document.createElement('ol');
+          students.forEach(o => (
+              `${listElem.innerHTML+=`<li>Name: ${o.name} Marks: ${o.marks}</li>`}`
+          ))
+          studentList.appendChild(listElem);
+        }
+        displayList()
+      </script>
+  </body>
+</html>

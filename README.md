@@ -1,1 +1,2 @@
-# practiceday1
+# practice day 6 
+
