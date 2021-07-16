@@ -15,6 +15,12 @@ app.get('/', (req, res) => {
     res.status(200).send('Hello World!')
 })
 
+app.get('/posts', (req,res) => {
+    const posts = new Array(20);
+    posts.fill({title: "Lorem Ipsum", body: "Lorem Lorem Lorem Ipsum Lorem Ipsum est rerum tempore vitae sequi sint nihil reprehenderit dolor beatae ea dolores neque fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis qui aperiam non debitis possimus qui neque nisi nulla"})
+    console.log(posts);
+    res.status(200).json(posts);
+})
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
