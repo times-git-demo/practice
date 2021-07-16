@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+    // AJAX Get Request using JQuery
+      $(function () {
+        $("button").click(function () {
+          $.get("https://jsonplaceholder.typicode.com/posts", function (data, status) {
+              const posts = data.slice(0,10);
+              const postList = document.createElement("div");
+              posts.forEach((post) => {
+                postList.innerHTML += `<div style="border: 1px solid gray">
+                    <ul style="list-style-type: circle">
+                        <li style="background-color:cyan; width:max-content"><b>ID</b>: ${post.id}</li>
+                        <li><b>Title</b>: ${post.title}</li>
+                        <li><b>Body</b>: ${post.body}</li>
+                    </ul>
+                </div>
+                `
+              })
+            $("#posts").append(postList);
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+      <h3>Send a GET request</h3>
+    <button>GET posts</button>
+    <div id="posts"></div>
+
+    </div>
+  </body>
+</html>
